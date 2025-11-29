@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanu AI</title>
+
+  <style>
+    body { font-family: "Poppins", sans-serif; background: #0d0d0d; padding: 20px; color: white; display: flex; justify-content: center; }
+    .container { width: 100%; max-width: 550px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+    h2 { text-align: center; color: #00d4ff; margin-bottom: 15px; }
+    #chatbox { height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 15px; }
+    .msg { max-width: 80%; padding: 10px 14px; border-radius: 14px; line-height: 1.4; animation: fadeIn 0.3s ease; }
+    .user { align-self: flex-end; background: linear-gradient(135deg,#00d4ff,#0077ff); color: white; }
+    .bot { align-self: flex-start; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to {opacity:1; transform: translateY(0);} }
+    .inputArea { display: flex; gap: 10px; margin-top: 15px; }
+    #inputBox { flex: 1; padding: 12px; border-radius: 12px; border: none; background: rgba(255,255,255,0.1); color: white; outline: none; }
+    #sendBtn { padding: 12px 18px; background: #00d4ff; color: black; border: none; border-radius: 12px; cursor: pointer; }
+    select { margin-top: 12px; font-weight:bold; width: 100%; padding:10px;  border-radius: 12px; background: rgba(255,255,255,0.1); color:#00d4ff; border:1px grey linear; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Shanu AI</h2>
+
+    <select id="modeSelect">
+      <option value="innocent">Innocent Baby</option>
+      <option value="flirty">Flirty</option>
+      <option value="gf">Girlfriend</option>
+      <option value="bf">Boyfriend</option>
+      <option value="rude">Rude</option>
+      <option value="roast">Roast (Abusive)</option>
+    </select>
+
+    <div id="chatbox"></div>
+
+    <div class="inputArea">
+      <input type="text" id="inputBox" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
